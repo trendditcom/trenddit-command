@@ -59,7 +59,7 @@ def split_text_by_tokens(file_path):
     # Write chunks to separate files
     base_name = os.path.splitext(file_path)[0]
     for i, chunk in enumerate(chunks):
-        output_file = f"{base_name} - part {i+1}.txt"
+        output_file = f"{base_name}-part-{i+1}.txt"
         with open(output_file, "w", encoding="utf-8") as file:
             file.write(chunk)
 

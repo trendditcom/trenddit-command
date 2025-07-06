@@ -63,7 +63,7 @@ def process_markdown_file(file_path, app_folder):
 
     # Write and execute install script
     install_script_path = os.path.join(
-        apps_parent_folder, f"{app_folder}_install_script.sh"
+        apps_parent_folder, f"{app_folder}-install-script.sh"
     )
 
     # check if the install script already exists

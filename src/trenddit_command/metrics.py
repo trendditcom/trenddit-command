@@ -49,7 +49,7 @@ def generate_yaml_data(
 
 
 def save_to_yaml(data):
-    filename = f"Metrics/test_summary_{datetime.now().strftime('%Y%m%d')}.yml"
+    filename = f"Metrics/test-summary-{datetime.now().strftime('%Y%m%d')}.yml"
 
     if os.path.exists(filename):
         with open(filename, "r") as file:

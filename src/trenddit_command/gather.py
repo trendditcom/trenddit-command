@@ -97,8 +97,9 @@ def article_scrape(
         else:
             file_name = urlparse(url).path.split("/")[-1]
 
-    # Clean the file name
-    file_name = re.sub(r"[^\w\-_\. ]", "_", file_name)
+    # Clean the file name and convert to kebab-case
+    file_name = re.sub(r"[^\w\-_\. ]", "-", file_name)
+    file_name = re.sub(r"[_\s]+", "-", file_name)
     file_name = file_name.strip()
     if not file_name.endswith(".md"):
         file_name += ".md"

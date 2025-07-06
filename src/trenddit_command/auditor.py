@@ -660,7 +660,7 @@ def _save_markdown_report(auditor):
     report = auditor.generate_markdown_report()
     os.makedirs("Audits", exist_ok=True)
     report_filename = (
-        f"Audits/trail_analysis_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+        f"Audits/trail-analysis-report-{datetime.now().strftime('%Y%m%d-%H%M%S')}.md"
     )
     with open(report_filename, "w") as f:
         f.write(report)
