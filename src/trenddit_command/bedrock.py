@@ -79,7 +79,7 @@ class Bedrock(Provider):
         yield from self._stream_response(request_data)
 
     def stream_vision_response(
-        self, image_data: bytes, prompt: str
+        self, image_data: bytes, prompt: str, media_type: str = None
     ) -> Generator[str, None, None]:
         request_data = self.create_request_data(prompt, image_data)
         yield from self._stream_response(request_data)

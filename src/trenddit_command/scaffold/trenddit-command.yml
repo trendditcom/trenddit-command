@@ -218,7 +218,6 @@ vision-models:
 - haiku-3.5
 - anthropic-sonnet-4
 - anthropic-sonnet-3.7
-- anthropic-haiku-3.5
 - gpt4o
 - gpt4mini
 - gemini-2.5-flash

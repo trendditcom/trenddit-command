@@ -802,3 +802,85 @@
         response_time: 1.188035011291504
         status: Success
         token_count: 14
+'2025-07-06T12:36:59.689182':
+  bedrock:
+    sonnet-4:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.341773986816406
+        status: Success
+        token_count: 87
+'2025-07-06T12:37:04.592746':
+  bedrock:
+    sonnet-3.7:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.829848766326904
+        status: Success
+        token_count: 94
+'2025-07-06T12:37:06.208705':
+  bedrock:
+    haiku-3.5:
+      vision:
+        details: 'An error occurred (ValidationException) when calling the InvokeModelWithResponseStream
+          operation: claude-3-5-haiku-20241022 does not support images.'
+        prompt: How many people are in the image?
+        response_time: .inf
+        status: Error
+        token_count: N/A
+'2025-07-06T12:37:12.454446':
+  claude:
+    anthropic-sonnet-4:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 6.163673162460327
+        status: Success
+        token_count: 111
+'2025-07-06T12:37:17.501164':
+  claude:
+    anthropic-sonnet-3.7:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.965529918670654
+        status: Success
+        token_count: 91
+'2025-07-06T12:37:20.865317':
+  claude:
+    anthropic-haiku-3.5:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 3.2813539505004883
+        status: Success
+        token_count: 74
+'2025-07-06T12:37:24.211832':
+  gemini:
+    gemini-2.5-flash:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 3.2683591842651367
+        status: Success
+        token_count: 1
+'2025-07-06T12:37:27.421613':
+  openai:
+    gpt4o:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 3.1214609146118164
+        status: Success
+        token_count: 10
+'2025-07-06T12:37:29.659985':
+  openai:
+    gpt4mini:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 2.1593170166015625
+        status: Success
+        token_count: 16
