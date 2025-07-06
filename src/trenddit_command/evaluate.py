@@ -77,7 +77,7 @@ def by_model_config(model_config):
                         continue
 
                 console.print(
-                    f"\nTesting [bold green]{model_config}[/bold green] with [bold blue]{provider}[/bold blue] - [bold magenta]{config[model_config]['model']}[/bold magenta]"
+                    f"\nTesting [bold green]{model_config}[/bold green] with [bold bright_blue]{provider}[/bold bright_blue] - [bold bright_magenta]{config[model_config]['model']}[/bold bright_magenta]"
                 )
                 console.print(f"Prompt: [italic]{prompt}[/italic]")
                 console.print("-" * 40)
@@ -172,7 +172,7 @@ def by_model_config(model_config):
     console.print("\nTest Summary:", style="bold underline")
     table = Table(title="Test Results (Sorted by Response Time)", box=box.ROUNDED)
     table.add_column("Provider", style="cyan")
-    table.add_column("Model", style="magenta")
+    table.add_column("Model", style="bright_magenta")
     table.add_column("Config", style="green")
     table.add_column("Status", style="yellow")
     table.add_column("Details", style="white")

@@ -168,7 +168,7 @@ def id(section):
     provider_instance.set_model_config(section)
 
     model_info = provider_instance.get_model_info()
-    console.print(f"Model Information: [bold magenta]{model_info}[/bold magenta]")
+    console.print(f"Model Information: [bold bright_magenta]{model_info}[/bold bright_magenta]")
     sys.exit(0)
 
 

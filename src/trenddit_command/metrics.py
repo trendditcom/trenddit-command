@@ -164,7 +164,7 @@ def display_trends(processed_data):
         console.print("No data to display", style="bold red")
         return
 
-    console.print(Panel("Trend Visualization", style="bold magenta"))
+    console.print(Panel("Trend Visualization", style="bold bright_magenta"))
 
     tables = []
     for (provider, model, config), data in processed_data.items():
@@ -172,7 +172,7 @@ def display_trends(processed_data):
             title=f"{provider} - {model} ({config})", box=box.ROUNDED, width=60
         )
         table.add_column("Metric", style="cyan", width=15)
-        table.add_column("Trend", style="magenta", width=12)
+        table.add_column("Trend", style="bright_magenta", width=12)
         table.add_column("Min", style="green", width=8)
         table.add_column("Max", style="red", width=8)
         table.add_column("Avg", style="yellow", width=8)

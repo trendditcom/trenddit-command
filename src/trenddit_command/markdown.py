@@ -165,9 +165,9 @@ def intent_select_paginate(sections, page=1, intents_per_page=10):
         console.print(table)
 
         if total_pages > 1:
-            msg = "Enter intent number, '[blue]n[/blue]' for next page, '[blue]p[/blue]' for previous page, or '[blue]q[/blue]' to quit"
+            msg = "Enter intent number, '[bright_blue]n[/bright_blue]' for next page, '[bright_blue]p[/bright_blue]' for previous page, or '[bright_blue]q[/bright_blue]' to quit"
         else:
-            msg = "Enter intent number or '[blue]q[/blue]' to quit"
+            msg = "Enter intent number or '[bright_blue]q[/bright_blue]' to quit"
 
         choice = Prompt.ask(msg, default="")
 
@@ -198,7 +198,7 @@ def file_select_paginate(directory, show_tokens=False, section=None, extensions=
         table.add_column("Filename", style="cyan")
         if show_tokens:
             table.add_column("Tokens", style="green")
-            table.add_column("Context", style="magenta")
+            table.add_column("Context", style="bright_magenta")
 
         for i, file in enumerate(files, 1):
             file_path = os.path.join(directory, file)
@@ -217,9 +217,9 @@ def file_select_paginate(directory, show_tokens=False, section=None, extensions=
 
         console.print(table)
         if total_pages > 1:
-            msg = "Enter file number, '[blue]n[/blue]' for next page, '[blue]p[/blue]' for previous page, or '[blue]q[/blue]' to quit"
+            msg = "Enter file number, '[bright_blue]n[/bright_blue]' for next page, '[bright_blue]p[/bright_blue]' for previous page, or '[bright_blue]q[/bright_blue]' to quit"
         else:
-            msg = "Enter file number or '[blue]q[/blue]' to quit"
+            msg = "Enter file number or '[bright_blue]q[/bright_blue]' to quit"
 
         choice = Prompt.ask(msg, default="")
 
