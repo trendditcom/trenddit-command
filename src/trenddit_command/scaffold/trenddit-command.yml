@@ -1,22 +1,20 @@
-# Folder configurations for various features
-folders:
-  audits: myai/audits
-  metrics: myai/metrics
-  responses: myai/responses
-  image-responses: myai/images/responses
-  gather-images: myai/images
-
 ask:
   lookup-folder: myai/raw
   max-tokens: 4000
   model: sonnet
-  provider: claude
   prompts-folder: myai/prompts
+  provider: claude
   save: true
   save-folder: myai/code
   system: Only respond to the prompt using valid markdown syntax. Do not explain your
     response.
   temperature: 0.1
+folders:
+  audits: myai/audits
+  gather-images: myai/images
+  image-responses: myai/images/responses
+  metrics: myai/metrics
+  responses: myai/responses
 gather:
   save-folder: myai/gather
   user-agent: Trenddit/1.0
@@ -53,67 +51,53 @@ merge:
   placeholder: '[merge here]'
   prompt-prefix: '> Prompt:'
 model-context:
-  gemini-flash: 1000000
-  gemini-pro: 2000000
-  gemma: 8192
+  anthropic-haiku-3.5: 200000
+  anthropic-sonnet-3.7: 200000
+  anthropic-sonnet-4: 200000
+  gemini-2.5-flash: 1048576
+  gemma-3n: 32000
   gpt4mini: 128000
   gpt4o: 128000
-  haiku: 200000
-  haiku3: 200000
-  llama: 128000
-  llava: 4096
-  mistral: 128000
-  mixtral: 32000
-  opus: 200000
-  qwen: 128000
-  sonar: 128000
-  sonnet: 200000
-  sonnet3: 200000
+  haiku-3.5: 200000
+  llama-3.3-70b: 131072
+  sonnet-3.7: 200000
+  sonnet-4: 200000
 model-mapping:
+  anthropic-haiku-3.5: claude-3-5-haiku-latest
+  anthropic-sonnet-3.7: claude-3-7-sonnet-latest
+  anthropic-sonnet-4: claude-sonnet-4-20250514
   dalle2: dall-e-2
   dalle3: dall-e-3
-  gemini-flash: gemini-1.5-flash
-  gemini-pro: gemini-1.5-pro
-  gemma: gemma2
+  deepseek-r1-8b: deepseek-r1
+  gemini-2.5-flash: gemini-2.5-flash
+  gemma-3n: gemma3n
   gpt4mini: gpt-4o-mini
   gpt4o: gpt-4o
-  haiku: claude-3-haiku-20240307
-  haiku3: anthropic.claude-3-haiku-20240307-v1:0
-  llama: llama3.1
-  llava: llava
-  mistral: mistral-nemo
-  mixtral: mixtral-8x7b-32768
-  opus: claude-3-opus-20240229
-  qwen: qwen2
-  sonar: llama-3.1-sonar-large-128k-online
-  sonnet: claude-3-5-sonnet-20240620
-  sonnet3: anthropic.claude-3-sonnet-20240229-v1:0
+  haiku-3.5: us.anthropic.claude-3-5-haiku-20241022-v1:0
+  llama-3.3-70b: llama-3.3-70b-versatile
+  sonnet-3.7: us.anthropic.claude-3-7-sonnet-20250219-v1:0
+  sonnet-4: us.anthropic.claude-sonnet-4-20250514-v1:0
 provider-model-mapping:
   bedrock:
-  - sonnet3
-  - haiku3
+  - sonnet-4
+  - sonnet-3.7
+  - haiku-3.5
   claude:
-  - sonnet
-  - opus
-  - haiku
+  - anthropic-sonnet-4
+  - anthropic-sonnet-3.7
+  - anthropic-haiku-3.5
   gemini:
-  - gemini-pro
-  - gemini-flash
+  - gemini-2.5-flash
   groq:
-  - mixtral
+  - llama-3.3-70b
   ollama:
-  - llama
-  - llava
-  - mistral
-  - gemma
-  - qwen
+  - gemma-3n
+  - deepseek-r1-8b
   openai:
   - gpt4o
   - gpt4mini
   - dalle3
   - dalle2
-  perplexity:
-  - sonar
 refer-gather:
   lookup-folder: myai/gather
   max-tokens: 4000
@@ -229,11 +213,12 @@ vision:
     Do not explain your response.
   temperature: 0.5
 vision-models:
-- sonnet
+- sonnet-4
+- sonnet-3.7
+- haiku-3.5
+- anthropic-sonnet-4
+- anthropic-sonnet-3.7
+- anthropic-haiku-3.5
 - gpt4o
 - gpt4mini
-- opus
-- haiku
-- gemini-pro
-- gemini-flash
-- llava
+- gemini-2.5-flash
