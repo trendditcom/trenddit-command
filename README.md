@@ -77,6 +77,38 @@ To leave the virtual environment using `deactivate` command. Re-enter using same
 
 Now you are ready to install Trenddit.
 
+### Development Setup with Poetry
+
+If you're working with the source code or want to contribute to the project, you can use Poetry for dependency management:
+
+```bash
+# Clone the repository and navigate to the project directory
+cd /path/to/trenddit-command
+
+# Activate poetry environment
+poetry shell
+
+# Install the package locally in development mode
+poetry install
+
+# Verify installation and check current model
+trenddit-command id
+
+# Test the CLI
+ask "How old is the oldest pyramid?"
+```
+
+Alternatively, you can run commands without activating the poetry shell:
+
+```bash
+# Install dependencies without activating shell
+poetry install
+
+# Run commands with poetry
+poetry run trenddit-command id
+poetry run ask "How old is the oldest pyramid?"
+```
+
 ## Command Reference
 
 *Note that `trenddit-command`, `ask`, `image` and `refer` are four top level commands available to you when you install Trenddit.
