@@ -13,7 +13,7 @@ gather:
   save-folder: Gather
   user-agent: Trenddit/1.0
   user-email: team@trenddit.com
-  user-website: https://www.trenddit.com
+  user-website: https://www.trenddit-command.com
 image:
   generation-seconds: 15
   lookup-folder: Prompts/ImageGen
