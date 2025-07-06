@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "ec108110e83d1a04",
+    "type": "split",
+    "children": [
+      {
+        "id": "51272fd2f4b567dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ef9f809e1c30c95b",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "80c85e9a31ff1e35",
+    "type": "split",
+    "children": [
+      {
+        "id": "9bad1e172951700e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "272c49843858c425",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "370b6997007808d9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ff270f9f72ba4b8a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4a4c438825e32623",
+    "type": "split",
+    "children": [
+      {
+        "id": "3353bd530b4eec2a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "27ed18b93dcf56d7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "e27812a80a3a3e86",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "4b3ee78ec559d870",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "5f60d4b65072c27d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "ef9f809e1c30c95b",
+  "lastOpenFiles": [
+    "Code/marketing-landing-marketing-landing-install.md",
+    "Code/stock-analysis-dashboard-stock-analysis.md",
+    "Code/cosmic-explorer-dashboard-based-other.md",
+    "Metrics/test_summary_20241111.yml",
+    "Prompts/Analyze/Briefing.md",
+    "Prompts/Tables/Table of Planets.md",
+    "Prompts/Tables",
+    "Prompts/NavamAI/Module App.md",
+    "Prompts/NavamAI/Docs App.md",
+    "Prompts/Invest/Table of Top Stocks.md",
+    "Prompts/Invest/Stock Analysis.md",
+    "Prompts/Images/Artist Assistant.md",
+    "Prompts/Charts/Mermaid Topic Visualization.md",
+    "Prompts/Apps/Create Vite App.md",
+    "Prompts/Apps/Create Streamlit App.md",
+    "Prompts/Analyze/Extract Tips.md",
+    "Prompts/NavamAI",
+    "Prompts/Invest",
+    "Prompts/Images",
+    "Prompts/Charts",
+    "Prompts/Apps",
+    "Prompts/Analyze",
+    "Prompts",
+    "Code/startup-expense-manager-expense-manager.md",
+    "Code/navamai-streamlit-provides-friendly-interface.md",
+    "Code/article-scraper.md",
+    "Code/article-scraper updated updated updated.md",
+    "Code/article-scraper updated updated.md",
+    "Code/article-scraper updated.md",
+    "Code/article-scraper-streamlit-provides-friendly updated updated.md",
+    "Code/article-scraper-streamlit-provides-friendly updated.md",
+    "Code/article-scraper-streamlit-provides-friendly.md",
+    "Prompts/NavamAI Docs App.md",
+    "Prompts/NavamAI Module App.md",
+    "Code/navamai-main-app.md",
+    "Metrics/test_summary_20241005.yml",
+    "Gather/images/mpa-v2-page-sections.jpg",
+    "Gather/images/page_parts.jpg",
+    "Gather/images/caching-high-level-diagram.png",
+    "~/Developer/Apps/bird-swarm-life-simulator/src/assets/react.svg",
+    "~/Developer/Apps/bird-swarm-life-simulator/public/vite.svg",
+    "Apps/saasy-dashboard/src/assets/react.svg",
+    "Apps/saasy-dashboard/public/vite.svg",
+    "Apps/todo-manager/src/assets/react.svg",
+    "Apps/todo-manager/public/vite.svg",
+    "Apps/todomaster/src/assets/react.svg"
+  ]
+}

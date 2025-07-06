@@ -1,0 +1,144 @@
+'2024-11-11T13:22:53.049913':
+  bedrock:
+    sonnet3:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 4.772423028945923
+        status: Success
+        token_count: 53
+'2024-11-11T13:22:53.983818':
+  bedrock:
+    haiku3:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 0.9084138870239258
+        status: Success
+        token_count: 33
+'2024-11-11T13:22:56.368214':
+  claude:
+    sonnet:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 2.349764108657837
+        status: Success
+        token_count: 76
+'2024-11-11T13:22:59.016506':
+  claude:
+    opus:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 2.6069979667663574
+        status: Success
+        token_count: 39
+'2024-11-11T13:23:00.334908':
+  claude:
+    haiku:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 1.2928359508514404
+        status: Success
+        token_count: 41
+'2024-11-11T13:23:01.578775':
+  gemini:
+    gemini-pro:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 1.2204511165618896
+        status: Success
+        token_count: 20
+'2024-11-11T13:23:02.808332':
+  gemini:
+    gemini-flash:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 0.7538859844207764
+        status: Success
+        token_count: 16
+'2024-11-11T13:23:03.450216':
+  groq:
+    mixtral:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 0.600844144821167
+        status: Success
+        token_count: 32
+'2024-11-11T13:23:10.349685':
+  ollama:
+    llama:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 6.877526044845581
+        status: Success
+        token_count: 45
+'2024-11-11T13:23:19.565285':
+  ollama:
+    llava:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 9.191027879714966
+        status: Success
+        token_count: 145
+'2024-11-11T13:23:26.930157':
+  ollama:
+    mistral:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 7.338663816452026
+        status: Success
+        token_count: 16
+'2024-11-11T13:23:30.483853':
+  ollama:
+    gemma:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 3.525221109390259
+        status: Success
+        token_count: 18
+'2024-11-11T13:23:33.050513':
+  ollama:
+    qwen:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 2.5380189418792725
+        status: Success
+        token_count: 16
+'2024-11-11T13:23:35.017393':
+  openai:
+    gpt4o:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 1.9262580871582031
+        status: Success
+        token_count: 50
+'2024-11-11T13:23:36.310825':
+  openai:
+    gpt4mini:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 1.258239984512329
+        status: Success
+        token_count: 45
+'2024-11-11T13:23:39.130640':
+  perplexity:
+    sonar:
+      ask:
+        details: Command executed successfully
+        prompt: How old is the oldest pyramid?
+        response_time: 2.780853033065796
+        status: Success
+        token_count: 132
