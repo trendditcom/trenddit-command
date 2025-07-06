@@ -8,7 +8,7 @@ import os
 
 import yaml
 
-CONFIG_FILE = "trenddit_command.yml"
+CONFIG_FILE = "trenddit-command.yml"
 
 
 def load_config(section=None):

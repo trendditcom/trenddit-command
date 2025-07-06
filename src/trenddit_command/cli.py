@@ -154,7 +154,16 @@ def id(section):
     config = configure.load_config()
     model_config = config.get(section)
 
-    provider = model_config.get("provider").lower()
+    if not model_config:
+        console.print(f"[bold red]Error: Section '{section}' not found in configuration[/bold red]")
+        sys.exit(1)
+
+    provider = model_config.get("provider")
+    if not provider:
+        console.print(f"[bold red]Error: No provider specified for section '{section}'[/bold red]")
+        sys.exit(1)
+
+    provider = provider.lower()
     provider_instance = utils.get_provider_instance(provider)
     provider_instance.set_model_config(section)
 
