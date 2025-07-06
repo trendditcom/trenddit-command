@@ -5,13 +5,20 @@
 # This code is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import os
+from pathlib import Path
 
 import yaml
+from dotenv import load_dotenv
 
 CONFIG_FILE = "trenddit-command.yml"
 
 
 def load_config(section=None):
+    # Load environment variables from .env.local if it exists
+    env_file = Path.cwd() / ".env.local"
+    if env_file.exists():
+        load_dotenv(env_file)
+    
     if not os.path.exists(CONFIG_FILE):
         return {} if section is None else {}
 
