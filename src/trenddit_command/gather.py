@@ -18,6 +18,7 @@ from rich.progress import (BarColumn, Progress, SpinnerColumn, TaskID,
 from robotexclusionrulesparser import RobotExclusionRulesParser
 
 import trenddit_command.configure as configure
+from .configure import load_config
 
 
 def article_scrape(
@@ -59,7 +60,11 @@ def article_scrape(
     for i, img in enumerate(img_tags, 1):
         img_url = urljoin(url, img.get("src"))
         img_name = os.path.basename(urlparse(img_url).path)
-        img_path = os.path.join(save_folder + "/images", img_name)
+        config = load_config()
+        images_subfolder = config.get("folders", {}).get("gather-images", "images")
+        img_folder = os.path.join(save_folder, images_subfolder)
+        os.makedirs(img_folder, exist_ok=True)
+        img_path = os.path.join(img_folder, img_name)
 
         progress.update(
             task_id,
@@ -75,9 +80,11 @@ def article_scrape(
                         f.write(chunk)
 
             # Replace image URL with local filename in markdown
+            config = load_config()
+            images_subfolder = config.get("folders", {}).get("gather-images", "images")
             markdown = re.sub(
                 r"!\[([^\]]*)\]\([^\)]*" + re.escape(img_name) + r"\)",
-                f"![\\1]({'images/' + img_name})",
+                f"![\\1]({images_subfolder + '/' + img_name})",
                 markdown,
             )
         except requests.RequestException as e:

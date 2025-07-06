@@ -14,6 +14,8 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
+from .configure import load_config
+
 console = Console()
 
 
@@ -49,7 +51,10 @@ def generate_yaml_data(
 
 
 def save_to_yaml(data):
-    filename = f"Metrics/test-summary-{datetime.now().strftime('%Y%m%d')}.yml"
+    config = load_config()
+    metrics_folder = config.get("folders", {}).get("metrics", "myai/metrics")
+    os.makedirs(metrics_folder, exist_ok=True)
+    filename = f"{metrics_folder}/test-summary-{datetime.now().strftime('%Y%m%d')}.yml"
 
     if os.path.exists(filename):
         with open(filename, "r") as file:
@@ -79,7 +84,10 @@ def save_test_summary(
     save_to_yaml(yaml_data)
 
 
-def read_yaml_files(directory="Metrics"):
+def read_yaml_files(directory=None):
+    if directory is None:
+        config = load_config()
+        directory = config.get("folders", {}).get("metrics", "myai/metrics")
     data = {}
     for filename in os.listdir(directory):
         if filename.startswith("test_summary_") and filename.endswith(".yml"):

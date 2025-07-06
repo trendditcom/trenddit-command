@@ -1,3 +1,11 @@
+# Folder configurations for various features
+folders:
+  audits: myai/audits
+  metrics: myai/metrics
+  responses: myai/responses
+  image-responses: myai/images/responses
+  gather-images: myai/images
+
 ask:
   lookup-folder: myai/raw
   max-tokens: 4000

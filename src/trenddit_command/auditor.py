@@ -14,6 +14,8 @@ from rich.console import Console
 from rich.table import Table
 from rich.text import Text
 
+from .configure import load_config
+
 console = Console()
 
 
@@ -658,9 +660,11 @@ def _create_dist_table(auditor):
 
 def _save_markdown_report(auditor):
     report = auditor.generate_markdown_report()
-    os.makedirs("Audits", exist_ok=True)
+    config = load_config()
+    audits_folder = config.get("folders", {}).get("audits", "myai/audits")
+    os.makedirs(audits_folder, exist_ok=True)
     report_filename = (
-        f"Audits/trail-analysis-report-{datetime.now().strftime('%Y%m%d-%H%M%S')}.md"
+        f"{audits_folder}/trail-analysis-report-{datetime.now().strftime('%Y%m%d-%H%M%S')}.md"
     )
     with open(report_filename, "w") as f:
         f.write(report)

@@ -1,19 +1,25 @@
 ask:
   lookup-folder: myai/raw
   max-tokens: 4000
-  model: sonnet
+  model: haiku3
   prompts-folder: myai/prompts
-  provider: claude
+  provider: bedrock
   save: true
   save-folder: myai/code
   system: Only respond to the prompt using valid markdown syntax. Do not explain your
     response.
   temperature: 0.1
+folders:
+  audits: myai/audits
+  gather-images: myai/images
+  image-responses: myai/images/responses
+  metrics: myai/metrics
+  responses: myai/responses
 gather:
   save-folder: myai/gather
   user-agent: Trenddit/1.0
   user-email: team@trenddit.com
-  user-website: https://www.trenddit-command.com
+  user-website: https://www.trenddit.com
 image:
   generation-seconds: 15
   lookup-folder: myai/prompts/images

@@ -11,6 +11,7 @@ from typing import Any, Dict, Generator, List
 from openai import OpenAI
 
 from trenddit_command.provider import Provider
+from .configure import load_config
 
 class Openai(Provider):
     def __init__(self):
@@ -78,7 +79,9 @@ class Openai(Provider):
         return self.save_image_response(prompt, image_data)
 
     def save_image_response(self, prompt: str, image_data: bytes) -> str:
-        responses_folder = self.model_config.get("save-folder", "image_responses")
+        config = load_config()
+        default_folder = config.get("folders", {}).get("image-responses", "myai/images/responses")
+        responses_folder = self.model_config.get("save-folder", default_folder)
         os.makedirs(responses_folder, exist_ok=True)
 
         words = [word.lower() for word in prompt.split()[:5]]

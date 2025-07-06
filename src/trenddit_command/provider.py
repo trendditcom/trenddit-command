@@ -13,6 +13,8 @@ from rich.console import Console
 from rich.live import Live
 from rich.markdown import Markdown
 
+from .configure import load_config
+
 import trenddit_command.configure as configure
 
 
@@ -65,7 +67,9 @@ class Provider(ABC):
     def save_response(
         self, prompt: str, response: str, title: Optional[str] = None
     ) -> str:
-        responses_folder = self.model_config.get("save-folder", "responses")
+        config = load_config()
+        default_folder = config.get("folders", {}).get("responses", "myai/responses")
+        responses_folder = self.model_config.get("save-folder", default_folder)
         os.makedirs(responses_folder, exist_ok=True)
 
         if title:
