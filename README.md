@@ -20,8 +20,8 @@ Go to a folder where you want to initialize Trenddit. This could be your Obsidia
 
 ```bash
 pip install -U trenddit-command # upgrade or install latest Trenddit
-trenddit-command init # copies config file, quick start samples
-trenddit-command id # identifies active provider and model
+tc init # copies config file, quick start samples
+tc id # identifies active provider and model
 ask "How old is the oldest pyramid?" # start prompting the model
 ```
 
@@ -43,8 +43,8 @@ For local models [install Ollama](https://ollama.com/) and download the latest [
 Now you are ready to test all models and providers.
 
 ```bash
-trenddit-command test ask
-trenddit-command test vision
+tc test ask
+tc test vision
 ```
 
 ### Python Environment Setup (optional)
@@ -91,8 +91,11 @@ poetry shell
 # Install the package locally in development mode
 poetry install
 
+# Copies config file, quick start samples
+tc init
+
 # Verify installation and check current model
-trenddit-command id
+tc id
 
 # Test the CLI
 ask "How old is the oldest pyramid?"
@@ -105,32 +108,32 @@ Alternatively, you can run commands without activating the poetry shell:
 poetry install
 
 # Run commands with poetry
-poetry run trenddit-command id
+poetry run tc id
 poetry run ask "How old is the oldest pyramid?"
 ```
 
 ## Command Reference
 
-*Note that `trenddit-command`, `ask`, `image` and `refer` are four top level commands available to you when you install Trenddit.
+*Note that `tc`, `ask`, `image` and `refer` are four top level commands available to you when you install Trenddit.
 
 | Command      | Example and Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ***ask**     | `ask "your prompt"`<br>Prompt the LLM for a fast, crisp (default up to 300 words), single turn response<br><br>`ask`<br>Browses the configured prompts folder, lists prompt templates for user to run.                                                                                                                                                                                                                                                                                                                   |
-| **audit**    | `trenddit-command audit`<br>Analyze your own usage of Trenddit over time with an insightful command line dashboard and markdown report.                                                                                                                                                                                                                                                                                                                                                                                            |
-| **config**   | `trenddit-command config ask save true`<br>Edit `trenddit-command.yml` file config from command line                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **gather**   | `trenddit-command gather "webpage url"`<br>Cleanly scrape an article from a webpage, without the menus, sidebar, footer. Includes images. Saves as markdown formatted similar to the HTML source.<br> <br>Refer the scraped markdown content using `refer gather` command.<br>Use vision on scraped images using `trenddit-command vision` command.                                                                                                                                                                                        |
+| **audit**    | `tc audit`<br>Analyze your own usage of Trenddit over time with an insightful command line dashboard and markdown report.                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **config**   | `tc config ask save true`<br>Edit `trenddit-command.yml` file config from command line                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **gather**   | `tc gather "webpage url"`<br>Cleanly scrape an article from a webpage, without the menus, sidebar, footer. Includes images. Saves as markdown formatted similar to the HTML source.<br> <br>Refer the scraped markdown content using `refer gather` command.<br>Use vision on scraped images using `tc vision` command.                                                                                                                                                                                                        |
 | ***refer**   | `refer text-to-extract`<br>Browse a set of raw text files and run custom prompts to extract new structured content.<br><br>`refer inline-prompts-to-run`<br>Run prompts embedded inline within text to expand, change, and convert existing documents.<br><br>`refer intents`<br>Expand a set of intents and prompts within an intents template<br><br>`refer your-command`<br>You can configure your own extensions to refer command by simply copying and changing any of the existing `refer-existing` model configs. |
-| **run**      | `trenddit-command run`<br>Browse `Code` folder for markdown files with code blocks, create, setup, and run the app in one single command!<br><br>The `Code` folder markdown files with code blocks are created using `ask` command running `Create Vite App.md` prompt template or similar.                                                                                                                                                                                                                                       |
-| **id**       | `trenddit-command id`<br>Identifies the current provider and model for `ask` command<br><br>`trenddit-command id section-name`<br>Identifies the provider and model defined in specific section                                                                                                                                                                                                                                                                                                                                            |
+| **run**      | `tc run`<br>Browse `Code` folder for markdown files with code blocks, create, setup, and run the app in one single command!<br><br>The `Code` folder markdown files with code blocks are created using `ask` command running `Create Vite App.md` prompt template or similar.                                                                                                                                                                                                                                       |
+| **id**       | `tc id`<br>Identifies the current provider and model for `ask` command<br><br>`tc id section-name`<br>Identifies the provider and model defined in specific section                                                                                                                                                                                                                                                                                                                                                            |
 | ***image**   | `image`<br>Select a prompt template to generate an image.<br><br>`image "Prompt for image to generate"`<br>Prompt to generate an image.                                                                                                                                                                                                                                                                                                                                                                                  |
-| **init**     | `trenddit-command init`<br>Initialize trenddit-command in any folder. Copies `trenddit-command.yml` default config and quick start Intents and Embeds folders and files. Checks before overwriting. Use --force option to force overwrite files and folders.                                                                                                                                                                                                                                                                                        |
-| **intents**  | `trenddit-command intents "Financial Analysis"`<br>Interactively choose from a list of intents within a template to refer into content embeds                                                                                                                                                                                                                                                                                                                                                                                     |
-| **merge**    | `trenddit-command merge "Source File"`<br>Finds `Source File updated` with placeholder tags `[merge here]` or as custom defined in `merge` config, then merges the two files into `Source File merged`. Use along with `refer inline-prompts-to-run` command to reduce number of tokens processed when editing long text for context but updating only a section.                                                                                                                                                                 |
-| **split**    | `trenddit-command split "Large File"`<br>Use this command to split a large file into chunks within a specified ratio of target model context. You can configure target model and ratio in `split` section of the configuration. Original file remains untouched and new files with same name and `part #` suffix are created.                                                                                                                                                                                                     |
-| **test**     | `trenddit-command test ask`<br>Tests trenddit-command command using all providers and models defined in `trenddit-command.yml` config and provides a test summary.<br><br>`trenddit-command test vision`<br>Test vision models.                                                                                                                                                                                                                                                                                                                              |
-| **trends**   | `trenddit-command trends`<br>Visualize latency and token length trends based on `trenddit-command test` runs for `ask` and `vision` commands across models and providers. You can trend for a period of days using  `--days 7` command option.                                                                                                                                                                                                                                                                                             |
-| **validate** | `trenddit-command validate "Financial Analysis"`<br>Validates prior generated embeds running another model and reports the percentage difference between validated and original content.                                                                                                                                                                                                                                                                                                                                          |
-| **vision**   | `trenddit-command vision -p path/to/image.png "Describe this image"`<br>Runs vision models on images from local path (-p), url (-u), or camera (-c) and responds based on prompt.                                                                                                                                                                                                                                                                                                                                                 |
+| **init**     | `tc init`<br>Initialize trenddit-command in any folder. Copies `trenddit-command.yml` default config and quick start Intents and Embeds folders and files. Checks before overwriting. Use --force option to force overwrite files and folders.                                                                                                                                                                                                                                                                                        |
+| **intents**  | `tc intents "Financial Analysis"`<br>Interactively choose from a list of intents within a template to refer into content embeds                                                                                                                                                                                                                                                                                                                                                                                     |
+| **merge**    | `tc merge "Source File"`<br>Finds `Source File updated` with placeholder tags `[merge here]` or as custom defined in `merge` config, then merges the two files into `Source File merged`. Use along with `refer inline-prompts-to-run` command to reduce number of tokens processed when editing long text for context but updating only a section.                                                                                                                                                                 |
+| **split**    | `tc split "Large File"`<br>Use this command to split a large file into chunks within a specified ratio of target model context. You can configure target model and ratio in `split` section of the configuration. Original file remains untouched and new files with same name and `part #` suffix are created.                                                                                                                                                                                                     |
+| **test**     | `tc test ask`<br>Tests trenddit-command command using all providers and models defined in `trenddit-command.yml` config and provides a test summary.<br><br>`tc test vision`<br>Test vision models.                                                                                                                                                                                                                                                                                                                                              |
+| **trends**   | `tc trends`<br>Visualize latency and token length trends based on `tc test` runs for `ask` and `vision` commands across models and providers. You can trend for a period of days using  `--days 7` command option.                                                                                                                                                                                                                                                                                                             |
+| **validate** | `tc validate "Financial Analysis"`<br>Validates prior generated embeds running another model and reports the percentage difference between validated and original content.                                                                                                                                                                                                                                                                                                                                          |
+| **vision**   | `tc vision -p path/to/image.png "Describe this image"`<br>Runs vision models on images from local path (-p), url (-u), or camera (-c) and responds based on prompt.                                                                                                                                                                                                                                                                                                                                                 |
 
 
 ## Trenddit Expands Your Content
@@ -164,7 +167,7 @@ When combined with other Trenddit commands this workflow can get even more power
 
 ![](https://raw.githubusercontent.com/trenddit-command/assets/main/images/obsidian-trenddit-command.png)
 
-Now run `trenddit-command intents-to-expand "Financial Analysis"` and choose among a list of intents to generate as content embeds. The response is saved under `Embeds` folder automatically and the embed is linked in your document template instantly. Rinse, repeat.
+Now run `tc intents-to-expand "Financial Analysis"` and choose among a list of intents to generate as content embeds. The response is saved under `Embeds` folder automatically and the embed is linked in your document template instantly. Rinse, repeat.
 
 This workflow can get really useful very fast. As each template has linked embeds, Obsidian Graph view can be used to visualize the links. You can get creative and link related templates or even enhance generated embeds with more intents. Of course this also means you can use all the great Obsidian plugins to generate websites, PDFs, and more.  Your creativity + Obsidian + Trenddit = Magic!
 
@@ -173,23 +176,23 @@ This workflow can get really useful very fast. As each template has linked embed
 
 ## Test and Evaluate Models and Providers
 
-Trenddit comes with configurable support for more than 15 leading models from five providers (Ollama, Anthropic, OpenAI, Groq, Google). The `trenddit-command test` command can be used to run each of the trenddit-command commands over all the provider and model combinations and respond with a summary of model test and evaluation results. Use this to quickly compare models and providers as well as when you add or remove a new model or provider in the config.
+Trenddit comes with configurable support for more than 15 leading models from five providers (Ollama, Anthropic, OpenAI, Groq, Google). The `tc test` command can be used to run each of the trenddit-command commands over all the provider and model combinations and respond with a summary of model test and evaluation results. Use this to quickly compare models and providers as well as when you add or remove a new model or provider in the config.
 
 This command is super useful when comparing model response time (latency), response quality (does it follow the system and prompt instructions), response accuracy, and token length (cost) for the same prompt. You can configure the test prompts within `trenddit-command.yml` in the `test` section.
 
 ![](https://raw.githubusercontent.com/trenddit-command/trenddit-command/main/images/test-summary.webp)
 
-Here is an example of running `trenddit-command test vision` command and resulting test summary. I this default prompt and image we are sharing image of around 150-160 people standing in close proximity in a circle and asking the model to count the number of people. The right number is between 150-160. This can be used to calculate the relative accuracy of each model based on the response. How closely the response follows the system prompt and the user prompts is  indicative of quality of response.
+Here is an example of running `tc test vision` command and resulting test summary. I this default prompt and image we are sharing image of around 150-160 people standing in close proximity in a circle and asking the model to count the number of people. The right number is between 150-160. This can be used to calculate the relative accuracy of each model based on the response. How closely the response follows the system prompt and the user prompts is  indicative of quality of response.
 
 You can also notice the response times seem proportional to model size. For Claude, Opus > Sonnet > Haiku. For Gemini, Pro > Flash. For OpenAI, GPT-4o > GPT-4-mini.
 
-You can similarly run `trenddit-command test ask` command to test across all models and providers. In this run you may find groq is among the fastest providers when it comes to response time.
+You can similarly run `tc test ask` command to test across all models and providers. In this run you may find groq is among the fastest providers when it comes to response time.
 
 Of course, you may need multiple test runs to get better intuition of response times as there are multiple factors which effect latency other than model size or architecture, like network latency, which may change across multiple test runs.
 
 ## Visualize Trends
 
-Each `trenddit-command test` command run saves the test summary data in `Metrics` folder by timestamp and provider-model. Over time you can visualize trends of latency and token count metrics to see if models are performing consistently. Run `trenddit-command trends` command to view trends for 7 days (default).
+Each `tc test` command run saves the test summary data in `Metrics` folder by timestamp and provider-model. Over time you can visualize trends of latency and token count metrics to see if models are performing consistently. Run `tc trends` command to view trends for 7 days (default).
 
 ![](https://raw.githubusercontent.com/trenddit-command/trenddit-command/main/images/trends.webp)
 
@@ -210,7 +213,7 @@ As Trenddit commands use the `trenddit-command.yml` config in the current folder
 
 There is no behavioral marketing or growth hacking a business can do within your command prompt. You guide your workflow the way you feel fit. Run the fastest model provider (Groq with Llama 3.1), or the most capable model right now (Sonnet 3.5 or GPT-4o), or the latest small model on your laptop (Mistral Nemo), or the model with the largest context (Gemini 1.5 Flash), you decide. Run with fast wifi or no-wifi (using local models), no constraints. Instantly search, research, Q&A to learn something or generate a set of artifacts to save for later. Switching to any of these workflows is a couple of changes in a config file or a few easy to remember commands on your terminal.
 
-You can also configure custom model names to actual model version mapping for simplifying model switching commands. With the following mapping the commands to switch models are `trenddit-command config ask model llama` or `trenddit-command config intents model haiku` and so on.
+You can also configure custom model names to actual model version mapping for simplifying model switching commands. With the following mapping the commands to switch models are `tc config ask model llama` or `tc config intents model haiku` and so on.
 
 ```yaml
 model-mapping:
@@ -241,9 +244,9 @@ model-mapping:
 
 ## Privacy controls 
 
-You decide which model and provider you trust, or even choose to run an LLM locally on your laptop. You are in control of how private your data and preferences remain. Trenddit supports state of the art models from Anthropic, OpenAI, Google, and Meta. You can choose a hosted provider or Ollama as a local model provider on your laptop. Switch between models and providers using a simple command like `trenddit-command config ask model llama` to switch from the current model.
+You decide which model and provider you trust, or even choose to run an LLM locally on your laptop. You are in control of how private your data and preferences remain. Trenddit supports state of the art models from Anthropic, OpenAI, Google, and Meta. You can choose a hosted provider or Ollama as a local model provider on your laptop. Switch between models and providers using a simple command like `tc config ask model llama` to switch from the current model.
 
-You can also load custom model config sets mapped to each command. Configure these in `trenddit-command.yml` file. Here is an example of constraining how `trenddit-command ask` and `trenddit-command intents` commands behave differently using local and hosted model providers.
+You can also load custom model config sets mapped to each command. Configure these in `trenddit-command.yml` file. Here is an example of constraining how `tc ask` and `tc intents` commands behave differently using local and hosted model providers.
 
 ```yaml
 ask:
@@ -270,7 +273,7 @@ intents:
 
 ## Audit Trail
 
-Trenddit saves a trail of commands, prompts, templates, lookup folders, and saved files in `trail.yml` file. You can visualize this anytime using `trenddit-command audit` command to gain insights of your Trenddit usage over time.
+Trenddit saves a trail of commands, prompts, templates, lookup folders, and saved files in `trail.yml` file. You can visualize this anytime using `tc audit` command to gain insights of your Trenddit usage over time.
 
 ![](https://raw.githubusercontent.com/trenddit-command/trenddit-command/main/images/audit-summary.webp)
 
@@ -284,4 +287,4 @@ Your intents are tasks you want to execute, goals you want to accomplish, plans 
 
 ## Validate Generations
 
-You can verify content generated by one LLM with validation from another model. Make sure you only run validate command after you have run `refer intents` command to generate the first pass of embeds. Use `trenddit-command validate "Financial Analysis"` or any intent template that you have created. The workflow for validation is similar to expand intents. Only in this case the validate model config decides which model and provider to use. You can also modify the validation prompt to check for any specific things relevant for your use case. The diff is calculated on original and validated text removing any newlines, white space, or markdown formatting when making the diff comparison using similarity scoring. Use this to automate quality validation of generated content.
+You can verify content generated by one LLM with validation from another model. Make sure you only run validate command after you have run `refer intents` command to generate the first pass of embeds. Use `tc validate "Financial Analysis"` or any intent template that you have created. The workflow for validation is similar to expand intents. Only in this case the validate model config decides which model and provider to use. You can also modify the validation prompt to check for any specific things relevant for your use case. The diff is calculated on original and validated text removing any newlines, white space, or markdown formatting when making the diff comparison using similarity scoring. Use this to automate quality validation of generated content.

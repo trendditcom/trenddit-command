@@ -47,7 +47,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-trenddit-command = "trenddit_command.cli:cli"
+tc = "trenddit_command.cli:cli"
 ask="trenddit_command.cli:ask"
 refer="trenddit_command.cli:refer"
 image="trenddit_command.cli:image"

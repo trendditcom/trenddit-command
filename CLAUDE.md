@@ -34,8 +34,8 @@ poetry run pytest --cov         # Run with coverage report
 poetry run pytest tests/test_cli.py  # Run specific test file
 
 # Application-level testing
-poetry run trenddit-command test ask     # Test all providers/models
-poetry run trenddit-command test vision  # Test vision models
+poetry run tc test ask     # Test all providers/models
+poetry run tc test vision  # Test vision models
 ```
 
 #### Code Quality
@@ -186,20 +186,20 @@ export AWS_SECRET_ACCESS_KEY=your_key_here
 ### Configuration Commands
 ```bash
 # View current configuration
-poetry run trenddit-command id
+poetry run tc id
 
 # Change model/provider
-poetry run trenddit-command config ask model sonnet
-poetry run trenddit-command config ask provider claude
+poetry run tc config ask model sonnet
+poetry run tc config ask provider claude
 
 # Initialize configuration in new directory
-poetry run trenddit-command init
+poetry run tc init
 ```
 
 ## Entry Points & CLI Commands
 
 ### Main Entry Points (from pyproject.toml)
-- `trenddit-command` - Main CLI
+- `tc` - Main CLI
 - `ask` - Quick prompting
 - `refer` - Content referencing
 - `image` - Image generation
@@ -222,18 +222,18 @@ poetry run trenddit-command init
 
 ### Debugging Provider Issues
 1. Check API key configuration
-2. Test provider directly: `poetry run trenddit-command test ask`
+2. Test provider directly: `poetry run tc test ask`
 3. Check model mappings in configuration
 4. Review provider-specific error handling
 
 ### Performance Testing
 ```bash
 # Test all providers/models
-poetry run trenddit-command test ask
-poetry run trenddit-command test vision
+poetry run tc test ask
+poetry run tc test vision
 
 # View performance trends
-poetry run trenddit-command trends --days 7
+poetry run tc trends --days 7
 ```
 
 ## Error Handling Patterns
