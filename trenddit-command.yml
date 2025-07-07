@@ -1,11 +1,11 @@
 ask:
   lookup-folder: myai/raw
   max-tokens: 4000
-  model: sonnet
+  model: anthropic-sonnet4
   prompts-folder: myai/prompts
   provider: claude
   save: true
-  save-folder: myai/code
+  save-folder: myai/posts
   system: Only respond to the prompt using valid markdown syntax. Do not explain your
     response.
   temperature: 0.1

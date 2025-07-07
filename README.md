@@ -178,13 +178,11 @@ Trenddit comes with configurable support for more than 15 leading models from fi
 
 This command is super useful when comparing model response time (latency), response quality (does it follow the system and prompt instructions), response accuracy, and token length (cost) for the same prompt. You can configure the test prompts within `trenddit-command.yml` in the `test` section.
 
-![](https://raw.githubusercontent.com/trenddit-command/trenddit-command/main/images/tc-test-ask.png)
+![](https://github.com/trendditcom/trenddit-command/blob/main/images/tc-test-ask.png)
 
 The screenshot above demonstrates the `tc test ask` command in action, showing a comprehensive test run across 12 different model configurations from providers including Groq, Gemini, OpenAI, Bedrock, and Claude. Each model is tested with the same prompt asking about NBA basketball court dimensions. The results table displays provider names, model identifiers, configuration settings, execution status, response times (ranging from 0.47s to 5.79s), and token counts. This visual summary makes it easy to compare performance metrics across providers - for instance, Groq's Llama models show the fastest response times (under 0.5s), while Ollama's local models take 3-5 seconds. The 100% success rate indicates all models successfully responded to the test prompt.
 
-![](https://raw.githubusercontent.com/trenddit-command/trenddit-command/main/images/test-summary.webp)
-
-![](https://raw.githubusercontent.com/trenddit-command/trenddit-command/main/images/tc-test-vision.png)
+![](https://github.com/trendditcom/trenddit-command/blob/main/images/tc-test-vision.png)
 
 Here is an example of running `tc test vision` command and resulting test summary. The screenshot shows a comprehensive test of vision capabilities across multiple providers and models using a challenging test image - a circular formation of approximately 100 people wearing blue shirts, photographed from above. The test prompt asks models to count the number of people in the image. The results reveal significant differences in vision model capabilities: only OpenAI's GPT-4o, Gemini models, Claude Sonnet-3.7, and Bedrock Sonnet-3.7 successfully processed the vision task, with response times ranging from 3.1s to 4.9s. Many models in the test suite (shown as "Skipped" with N/A values) are not equipped with vision capabilities, highlighting the importance of selecting appropriate models for vision tasks. This visual comparison helps users quickly identify which models support vision processing and their relative performance characteristics.
 
