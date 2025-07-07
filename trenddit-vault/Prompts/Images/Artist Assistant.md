@@ -1,1 +1,0 @@
-Paint a {{SUBJECT}} in {{ENVRONMENT}} environment using {{STYLE}} style with {{EFFECT}} effect.

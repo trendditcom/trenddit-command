@@ -884,3 +884,645 @@
         response_time: 2.1593170166015625
         status: Success
         token_count: 16
+'2025-07-06T15:49:04.361009':
+  bedrock:
+    sonnet-4:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 5.065723896026611
+        status: Success
+        token_count: 114
+'2025-07-06T15:49:08.696591':
+  bedrock:
+    sonnet-3.7:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.258062124252319
+        status: Success
+        token_count: 89
+'2025-07-06T15:49:10.228951':
+  bedrock:
+    haiku-3.5:
+      vision:
+        details: 'An error occurred (ValidationException) when calling the InvokeModelWithResponseStream
+          operation: claude-3-5-haiku-20241022 does not support images.'
+        prompt: How many people are in the image?
+        response_time: .inf
+        status: Error
+        token_count: N/A
+'2025-07-06T15:49:16.271645':
+  claude:
+    anthropic-sonnet-4:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 5.938136100769043
+        status: Success
+        token_count: 107
+'2025-07-06T15:49:20.652399':
+  claude:
+    anthropic-sonnet-3.7:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.295890808105469
+        status: Success
+        token_count: 100
+'2025-07-06T15:49:24.077386':
+  gemini:
+    gemini-2.5-flash:
+      vision:
+        details: 'Invalid operation: The `response.text` quick accessor requires the
+          response to contain a valid `Part`, but none were returned. Please check
+          the `candidate.safety_ratings` to determine if the response was blocked.'
+        prompt: How many people are in the image?
+        response_time: .inf
+        status: Error
+        token_count: N/A
+'2025-07-06T15:49:27.036383':
+  openai:
+    gpt4o:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 2.8680777549743652
+        status: Success
+        token_count: 10
+'2025-07-06T15:49:29.023459':
+  openai:
+    gpt4mini:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 1.9088191986083984
+        status: Success
+        token_count: 16
+'2025-07-06T15:51:33.243963':
+  bedrock:
+    sonnet-4:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.678098201751709
+        status: Success
+        token_count: 105
+'2025-07-06T15:51:38.210835':
+  bedrock:
+    sonnet-3.7:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.892486810684204
+        status: Success
+        token_count: 101
+'2025-07-06T15:51:42.911180':
+  claude:
+    anthropic-sonnet-4:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.6076788902282715
+        status: Success
+        token_count: 114
+'2025-07-06T15:51:46.040022':
+  claude:
+    anthropic-sonnet-3.7:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 3.024103879928589
+        status: Success
+        token_count: 97
+'2025-07-06T15:51:49.205612':
+  gemini:
+    gemini-2.5-flash:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 3.0826239585876465
+        status: Success
+        token_count: 1
+'2025-07-06T15:51:51.219400':
+  openai:
+    gpt4o:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 1.9209411144256592
+        status: Success
+        token_count: 10
+'2025-07-06T15:51:52.415154':
+  openai:
+    gpt4mini:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 1.1136536598205566
+        status: Success
+        token_count: 13
+'2025-07-06T15:52:17.385784':
+  bedrock:
+    sonnet-4:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.6825010776519775
+        status: Success
+        token_count: 13
+'2025-07-06T15:52:18.955326':
+  bedrock:
+    sonnet-3.7:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.4902451038360596
+        status: Success
+        token_count: 20
+'2025-07-06T15:52:20.562861':
+  bedrock:
+    haiku-3.5:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.525299072265625
+        status: Success
+        token_count: 22
+'2025-07-06T15:52:22.495728':
+  claude:
+    anthropic-sonnet-4:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.8227729797363281
+        status: Success
+        token_count: 13
+'2025-07-06T15:52:24.038709':
+  claude:
+    anthropic-sonnet-3.7:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.4490859508514404
+        status: Success
+        token_count: 20
+'2025-07-06T15:52:25.370559':
+  claude:
+    anthropic-haiku-3.5:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.2414312362670898
+        status: Success
+        token_count: 19
+'2025-07-06T15:52:26.328319':
+  gemini:
+    gemini-2.5-flash:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.8737311363220215
+        status: Success
+        token_count: 2
+'2025-07-06T15:52:27.054827':
+  groq:
+    llama-3.3-70b:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.6369059085845947
+        status: Success
+        token_count: 19
+'2025-07-06T15:52:29.761233':
+  ollama:
+    gemma-3n:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 2.6416287422180176
+        status: Success
+        token_count: 15
+'2025-07-06T15:52:41.410393':
+  ollama:
+    deepseek-r1-8b:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 11.567692995071411
+        status: Success
+        token_count: 397
+'2025-07-06T15:52:44.493725':
+  openai:
+    gpt4o:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 2.9548988342285156
+        status: Success
+        token_count: 13
+'2025-07-06T15:52:45.183340':
+  openai:
+    gpt4mini:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.6102659702301025
+        status: Success
+        token_count: 15
+'2025-07-06T16:39:47.851892':
+  bedrock:
+    sonnet4:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.6468830108642578
+        status: Success
+        token_count: 13
+'2025-07-06T16:39:49.100028':
+  bedrock:
+    sonnet-3.7:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.1866350173950195
+        status: Success
+        token_count: 20
+'2025-07-06T16:39:50.906476':
+  bedrock:
+    haiku-3.5:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.7225291728973389
+        status: Success
+        token_count: 22
+'2025-07-06T16:39:53.014691':
+  claude:
+    anthropic-sonnet4:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.9986412525177002
+        status: Success
+        token_count: 13
+'2025-07-06T16:39:55.381092':
+  claude:
+    anthropic-sonnet-3.7:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 2.2705070972442627
+        status: Success
+        token_count: 20
+'2025-07-06T16:39:56.908569':
+  claude:
+    anthropic-haiku-3.5:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.4332549571990967
+        status: Success
+        token_count: 22
+'2025-07-06T16:39:57.766023':
+  gemini:
+    gemini-2.5-flash:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.7728090286254883
+        status: Success
+        token_count: 2
+'2025-07-06T16:39:58.334941':
+  groq:
+    llama-3.3-70b:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.47362613677978516
+        status: Success
+        token_count: 19
+'2025-07-06T16:40:01.415840':
+  ollama:
+    gemma3n:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 2.9965031147003174
+        status: Success
+        token_count: 15
+'2025-07-06T16:40:08.288205':
+  ollama:
+    qwen3:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 6.785600900650024
+        status: Success
+        token_count: 162
+'2025-07-06T16:40:09.325892':
+  openai:
+    gpt4o:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.9071822166442871
+        status: Success
+        token_count: 13
+'2025-07-06T16:40:11.428870':
+  openai:
+    gpt4o-mini:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 2.0179920196533203
+        status: Success
+        token_count: 15
+'2025-07-06T16:46:19.969740':
+  bedrock:
+    sonnet4:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.6583600044250488
+        status: Success
+        token_count: 13
+'2025-07-06T16:46:21.506718':
+  bedrock:
+    sonnet-3.7:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.4481379985809326
+        status: Success
+        token_count: 20
+'2025-07-06T16:46:22.856474':
+  bedrock:
+    haiku-3.5:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.277440071105957
+        status: Success
+        token_count: 14
+'2025-07-06T16:46:24.839959':
+  claude:
+    anthropic-sonnet4:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.860002040863037
+        status: Success
+        token_count: 13
+'2025-07-06T16:46:25.798708':
+  claude:
+    anthropic-sonnet-3.7:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.8644659519195557
+        status: Success
+        token_count: 20
+'2025-07-06T16:46:27.036537':
+  claude:
+    anthropic-haiku-3.5:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.1407527923583984
+        status: Success
+        token_count: 18
+'2025-07-06T16:46:27.914410':
+  gemini:
+    gemini-2.5-flash:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.7895009517669678
+        status: Success
+        token_count: 2
+'2025-07-06T16:46:28.644188':
+  groq:
+    llama-3.3-70b:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.6310060024261475
+        status: Success
+        token_count: 19
+'2025-07-06T16:46:31.603070':
+  ollama:
+    gemma3n:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 2.892839193344116
+        status: Success
+        token_count: 15
+'2025-07-06T16:46:37.235039':
+  ollama:
+    qwen3:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 5.546438694000244
+        status: Success
+        token_count: 162
+'2025-07-06T16:46:37.979230':
+  openai:
+    gpt4o:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.6785211563110352
+        status: Success
+        token_count: 13
+'2025-07-06T16:46:39.673810':
+  openai:
+    gpt4o-mini:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.6135268211364746
+        status: Success
+        token_count: 15
+'2025-07-06T16:46:54.349512':
+  bedrock:
+    sonnet4:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.6876039505004883
+        status: Success
+        token_count: 13
+'2025-07-06T16:46:55.838970':
+  bedrock:
+    sonnet-3.7:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.3953311443328857
+        status: Success
+        token_count: 20
+'2025-07-06T16:46:57.096366':
+  bedrock:
+    haiku-3.5:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.1567270755767822
+        status: Success
+        token_count: 14
+'2025-07-06T16:46:59.386839':
+  claude:
+    anthropic-sonnet4:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 2.2068800926208496
+        status: Success
+        token_count: 13
+'2025-07-06T16:47:01.009792':
+  claude:
+    anthropic-sonnet-3.7:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.5330891609191895
+        status: Success
+        token_count: 20
+'2025-07-06T16:47:03.079975':
+  claude:
+    anthropic-haiku-3.5:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 1.9731500148773193
+        status: Success
+        token_count: 18
+'2025-07-06T16:47:03.855856':
+  gemini:
+    gemini-2.5-flash:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.672929048538208
+        status: Success
+        token_count: 2
+'2025-07-06T16:47:04.389846':
+  groq:
+    llama-3.3-70b:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.43255114555358887
+        status: Success
+        token_count: 19
+'2025-07-06T16:47:05.229929':
+  ollama:
+    gemma3n:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.7568860054016113
+        status: Success
+        token_count: 15
+'2025-07-06T16:47:08.396940':
+  ollama:
+    qwen3:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 3.0775411128997803
+        status: Success
+        token_count: 124
+'2025-07-06T16:47:09.263109':
+  openai:
+    gpt4o:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.7959339618682861
+        status: Success
+        token_count: 13
+'2025-07-06T16:47:10.315519':
+  openai:
+    gpt4o-mini:
+      ask:
+        details: Command executed successfully
+        prompt: What is the length of an NBA basketball court?
+        response_time: 0.9588170051574707
+        status: Success
+        token_count: 15
+'2025-07-06T16:48:39.675172':
+  bedrock:
+    sonnet-3.7:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.749288082122803
+        status: Success
+        token_count: 89
+'2025-07-06T16:48:44.436042':
+  claude:
+    anthropic-sonnet-3.7:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.6549601554870605
+        status: Success
+        token_count: 110
+'2025-07-06T16:48:47.587605':
+  gemini:
+    gemini-2.5-flash:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 3.024445056915283
+        status: Success
+        token_count: 1
+'2025-07-06T16:48:48.923219':
+  openai:
+    gpt4o:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 1.2247860431671143
+        status: Success
+        token_count: 10
+'2025-07-06T16:50:42.111487':
+  bedrock:
+    sonnet-3.7:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 4.024115085601807
+        status: Success
+        token_count: 80
+'2025-07-06T16:50:46.149473':
+  claude:
+    anthropic-sonnet-3.7:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 3.923640012741089
+        status: Success
+        token_count: 81
+'2025-07-06T16:50:49.612747':
+  gemini:
+    gemini-2.5-flash:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 3.337053060531616
+        status: Success
+        token_count: 1
+'2025-07-06T16:50:52.069058':
+  openai:
+    gpt4o:
+      vision:
+        details: Command executed successfully
+        prompt: How many people are in the image?
+        response_time: 2.353832960128784
+        status: Success
+        token_count: 10

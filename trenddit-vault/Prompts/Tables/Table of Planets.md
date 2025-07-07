@@ -1,1 +1,0 @@
-Create a table of planets in the solar system. Add columns for size, moons, distance from sun, gravity, composition.

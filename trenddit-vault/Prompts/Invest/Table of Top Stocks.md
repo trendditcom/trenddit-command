@@ -1,1 +1,0 @@
-Create a table of stocks with largest market cap in NASDAQ. Add columns for company, stock symbol, current stock price, P/E Ratio, Market Cap.

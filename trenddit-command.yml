@@ -56,34 +56,35 @@ model-context:
   anthropic-sonnet-4: 200000
   gemini-2.5-flash: 1048576
   gemma-3n: 32000
-  gpt4mini: 128000
   gpt4o: 128000
+  gpt4o-mini: 128000
   haiku-3.5: 200000
   llama-3.3-70b: 131072
+  qwen3: 40000
   sonnet-3.7: 200000
-  sonnet-4: 200000
+  sonnet4: 200000
 model-mapping:
   anthropic-haiku-3.5: claude-3-5-haiku-latest
   anthropic-sonnet-3.7: claude-3-7-sonnet-latest
-  anthropic-sonnet-4: claude-sonnet-4-20250514
+  anthropic-sonnet4: claude-sonnet-4-20250514
   dalle2: dall-e-2
   dalle3: dall-e-3
-  deepseek-r1-8b: deepseek-r1
   gemini-2.5-flash: gemini-2.5-flash
-  gemma-3n: gemma3n
-  gpt4mini: gpt-4o-mini
+  gemma3n: gemma3n
   gpt4o: gpt-4o
+  gpt4o-mini: gpt-4o-mini
   haiku-3.5: us.anthropic.claude-3-5-haiku-20241022-v1:0
   llama-3.3-70b: llama-3.3-70b-versatile
+  qwen3: qwen3
   sonnet-3.7: us.anthropic.claude-3-7-sonnet-20250219-v1:0
-  sonnet-4: us.anthropic.claude-sonnet-4-20250514-v1:0
+  sonnet4: us.anthropic.claude-sonnet-4-20250514-v1:0
 provider-model-mapping:
   bedrock:
-  - sonnet-4
+  - sonnet4
   - sonnet-3.7
   - haiku-3.5
   claude:
-  - anthropic-sonnet-4
+  - anthropic-sonnet4
   - anthropic-sonnet-3.7
   - anthropic-haiku-3.5
   gemini:
@@ -91,11 +92,11 @@ provider-model-mapping:
   groq:
   - llama-3.3-70b
   ollama:
-  - gemma-3n
-  - deepseek-r1-8b
+  - gemma3n
+  - qwen3
   openai:
   - gpt4o
-  - gpt4mini
+  - gpt4o-mini
   - dalle3
   - dalle2
 refer-gather:
@@ -186,7 +187,7 @@ split:
   context-ratio: 0.8
   model: sonnet
 test:
-  ask: How old is the oldest pyramid?
+  ask: What is the length of an NBA basketball court?
   image-path: myai/images/hackathon.jpg
   vision: How many people are in the image?
 validate:
@@ -215,7 +216,6 @@ vision:
 vision-models:
 - sonnet-4
 - sonnet-3.7
-- haiku-3.5
 - anthropic-sonnet-4
 - anthropic-sonnet-3.7
 - gpt4o
