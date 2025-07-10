@@ -1,11 +1,11 @@
 ask:
   lookup-folder: myai/raw
   max-tokens: 4000
-  model: sonnet
+  model: anthropic-sonnet4
   prompts-folder: myai/prompts
   provider: claude
   save: true
-  save-folder: myai/code
+  save-folder: myai/posts
   system: Only respond to the prompt using valid markdown syntax. Do not explain your
     response.
   temperature: 0.1
@@ -56,11 +56,11 @@ model-context:
   anthropic-sonnet-4: 200000
   gemini-2.5-flash: 1048576
   gemma-3n: 32000
-  qwen3: 40000
-  gpt4o-mini: 128000
   gpt4o: 128000
+  gpt4o-mini: 128000
   haiku-3.5: 200000
   llama-3.3-70b: 131072
+  qwen3: 40000
   sonnet-3.7: 200000
   sonnet4: 200000
 model-mapping:
@@ -71,11 +71,11 @@ model-mapping:
   dalle3: dall-e-3
   gemini-2.5-flash: gemini-2.5-flash
   gemma3n: gemma3n
-  qwen3: qwen3
-  gpt4o-mini: gpt-4o-mini
   gpt4o: gpt-4o
+  gpt4o-mini: gpt-4o-mini
   haiku-3.5: us.anthropic.claude-3-5-haiku-20241022-v1:0
   llama-3.3-70b: llama-3.3-70b-versatile
+  qwen3: qwen3
   sonnet-3.7: us.anthropic.claude-3-7-sonnet-20250219-v1:0
   sonnet4: us.anthropic.claude-sonnet-4-20250514-v1:0
 provider-model-mapping:

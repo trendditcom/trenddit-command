@@ -11,7 +11,7 @@ ask:
   temperature: 0.1
 folders:
   audits: myai/audits
-  gather-images: myai/images
+  gather-images: images
   image-responses: myai/images/responses
   metrics: myai/metrics
   responses: myai/responses
@@ -53,7 +53,7 @@ merge:
 model-context:
   anthropic-haiku-3.5: 200000
   anthropic-sonnet-3.7: 200000
-  anthropic-sonnet-4: 200000
+  anthropic-sonnet4: 200000
   gemini-2.5-flash: 1048576
   gemma-3n: 32000
   gpt4o: 128000
@@ -102,7 +102,7 @@ provider-model-mapping:
 refer-gather:
   lookup-folder: myai/gather
   max-tokens: 4000
-  model: sonnet
+  model: anthropic-sonnet4
   provider: claude
   save: true
   save-folder: myai/posts

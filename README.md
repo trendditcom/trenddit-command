@@ -133,6 +133,13 @@ poetry run ask "How old is the oldest pyramid?"
 | **validate** | `tc validate "Financial Analysis"`<br>Validates prior generated embeds running another model and reports the percentage difference between validated and original content.                                                                                                                                                                                                                                                                                                                                          |
 | **vision**   | `tc vision -p path/to/image.png "Describe this image"`<br>Runs vision models on images from local path (-p), url (-u), or camera (-c) and responds based on prompt.                                                                                                                                                                                                                                                                                                                                                 |
 
+## Ask Command in Action
+
+The `ask` command provides a powerful interface for quick AI interactions right in your terminal. Beyond simple prompts, it can generate structured content like tables, lists, and formatted markdown responses. The configuration system in `trenddit-command.yml` allows you to customize how the `ask` command behaves - from choosing models and providers to setting save locations and response parameters. This flexibility means you can tailor the command to your specific workflow needs, whether you're generating quick answers or creating structured content that integrates with your markdown-based knowledge management system.
+
+![](images/tc-ask-config-table-save.png)
+
+The screenshot above shows the `ask` command generating a formatted table of astronomical discoveries. Notice how the configuration file on the left defines parameters like the model (sonnet), provider (claude), save location (myai/posts), and system prompt. The terminal shows the command execution, and the response is automatically saved as a markdown file with a properly formatted table. This demonstrates how Trenddit seamlessly integrates AI responses into your existing workflow, saving structured content that can be immediately used in tools like Obsidian or VS Code.
 
 ## Trenddit Expands Your Content
 
@@ -162,6 +169,14 @@ To create a new document type like research papers, class notes, cooking recipes
 ## Combining Trenddit Commands
 
 When combined with other Trenddit commands this workflow can get even more powerful. As an example, start by defining your document template for a set of intents and prompts as a simple markdown. For example `Financial Analysis` or `Product Management` are shown here. Next add a few intents as headings like, `Macro Factors Impact Stocks` or `Top Companies by ROCE` and so on. Then add simple prompts under these intents to generate content. You can now use Trenddit to expand on the set of intents and prompts in your document template with the command `refer intents-to-expand "Financial Analysis"` and the model will brainstorm more related intents and prompts for you to use.
+
+### Gather and Refer Workflow
+
+The `gather` command seamlessly integrates web content into your Trenddit workflow by cleanly scraping articles and saving them as markdown files. When combined with the `refer` command, you can extract insights, summarize content, or transform web articles into your own knowledge base entries. This powerful combination allows you to research topics online and immediately process them through AI models to create structured, personalized content that fits your specific needs.
+
+![](images/tc-gather-refer.png)
+
+The screenshot demonstrates the gather-refer workflow in action. On the left, you can see a gathered article about "Inference Economics of Language Models" that has been cleanly scraped and formatted as markdown, complete with headings, insights, and even performance benchmark tables. The terminal shows the gather command in action, scraping web content and saving it locally. This gathered content can then be processed using the `refer` command with custom prompts to extract specific insights, create summaries, or transform the content according to your configured templates. This workflow is particularly powerful for research tasks, allowing you to quickly build a knowledge base from web sources while maintaining full control over how the content is processed and stored.
 
 ![](https://raw.githubusercontent.com/trenddit-command/assets/main/images/obsidian-trenddit-command.png)
 
